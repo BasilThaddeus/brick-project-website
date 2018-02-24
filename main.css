@@ -14,9 +14,11 @@ li {
     padding-top: 0px;
 }
 .headerContent {
-    width: 395px;
+    width: 425px;
     height: auto;
     margin: 0 auto;
+    font-family: "Verdana";
+    font-size: 15;
 }
 .headerContent a img {
     width: 1000px;
@@ -85,4 +87,7 @@ li {
     height: 200px;
     margin: 0px auto;
     display: block;
+}
+.dwnload {
+	font-family: "Verdana";
 }
