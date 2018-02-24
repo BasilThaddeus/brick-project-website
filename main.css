@@ -6,7 +6,6 @@ ul {
 li {
     display: inline;
 }
-
 }
 .header {
     width: 50%;
@@ -15,7 +14,7 @@ li {
     padding-top: 0px;
 }
 .headerContent {
-    width: 1000px;
+    width: 395px;
     height: auto;
     margin: 0 auto;
 }
@@ -54,9 +53,6 @@ li {
     height: 0;
     border-bottom: 2px solid #a7e0ee;
 }
-
-/* */
-
 .dwnload ul {
     margin: 0;
     padding: 0;
