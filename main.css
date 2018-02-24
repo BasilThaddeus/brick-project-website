@@ -70,3 +70,19 @@ li {
 .dwnload ul li a:hover {
     color: skyblue;
 }
+.text {
+    width: 0%;
+    height: auto;
+    padding-top: 1px;
+}
+.textContent {
+    width: 395px;
+    height: auto;
+    margin: 0 auto;
+}
+.textContent a img {
+    width: 1000px;
+    height: 200px;
+    margin: 0px auto;
+    display: block;
+}
