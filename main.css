@@ -26,7 +26,9 @@ li {
     display: block;
 }
 .nav {
-    margin-top: -10px;
+	border-radius: 25px;
+	border: 2px solid #000066;
+    margin-top: -5px;
     height: 35px;
     background: darkgray;
 }
