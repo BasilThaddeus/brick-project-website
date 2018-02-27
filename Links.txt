@@ -1,0 +1,17 @@
+This file is just for links that are useful to us in the development of this site. Store it here if you need to access it later, or just think it may be useful in the future. 
+
+David: {
+	JavaScript: {
+		Node.js: {
+			https://www.webucator.com/tutorial/learn-ajax/intro-ajax-the-nodejs-server/installing-running-nodejs-reading.cfm#tutorial
+			https://stackoverflow.com/questions/6011984/basic-ajax-send-receive-with-node-js
+		}
+		AJAX: {
+			https://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp
+		}
+	}
+}
+Basil: {
+
+}
+
