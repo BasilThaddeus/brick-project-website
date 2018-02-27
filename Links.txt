@@ -5,6 +5,8 @@ David: {
 		Node.js: {
 			https://www.webucator.com/tutorial/learn-ajax/intro-ajax-the-nodejs-server/installing-running-nodejs-reading.cfm#tutorial
 			https://stackoverflow.com/questions/6011984/basic-ajax-send-receive-with-node-js
+			https://ru.godaddy.com/help/set-up-nodejs-application-for-production-ubuntu-17352
+			https://www.codeproject.com/Questions/1069604/how-to-retrieve-data-from-sql-database-from-javasc
 		}
 		AJAX: {
 			https://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp
