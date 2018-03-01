@@ -1,50 +1,65 @@
 <html>
-<head><title>Login</title></head>
-<body>
+<head><title>Login and Signup</title></head>
+<link rel="stylesheet" type="text/css" href="main.css">
 <style>
 body{
-
 padding:200px;
 padding-left:550px;
 padding-right:550px;
-background-image:url('http://hdqwalls.com/wallpapers/bthumb/imac-pro-5k-ad.jpg');
+background-image:url('https://i.imgur.com/Qe4zWsA.jpg');
  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: #e7e7e7;
-   
+</style>
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 375;
+    height: 125;
 }
+.login {border-radius: 8px}
+.signup {border-radius: 8px}
 .login {
-
-  width: 250px;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  margin: 150px 0px 0px -155px;
-  background: rgba(0,0,0,0.5);
-  padding: 20px 30px;
-  border-radius: 5px;
-  box-shadow: 0px 1px 0px rgba(0,0,0,0.3),inset 0px 1px 0px rgba(255,255,255,0.07)
+    background-color: white; 
+    color: darkgray; 
+    border: 2px solid #4CAF50;
 }
 
-h1{
- color:white;
+.login:hover {
+    background-color: #4CAF50;
+    color: white;
 }
-input{
- width:250px;
- height:30px;
+.signup {
+	background-color: white;
+	color: darkgray;
+	border: 2px solid #008CBA;
 }
-input[type="button"]{
-   background: #3399ff;
-  border: 0;
-  width: 250px;
-  height: 40px;
-  border-radius: 3px;
-  color: white;
-  cursor: pointer;
-  transition: background 0.4s linear;
+.signup:hover {
+	background-color: #008CBA;
+	color: white;
 }
+<<<<<<< HEAD
+</style>
+</head>
+<body>
+
+<button class="button login">Login</button>
+<button class="button signup">Sign Up</button>
+
+=======
 </style><center>
 <div class="login">
 <form action="main.html" method="POST">
@@ -57,5 +72,6 @@ input[type="button"]{
 </form>
 </div>
 </script>
+>>>>>>> bf6561a0307fc70b87a78c8fd295999b0875fb43
 </body>
 </html>
