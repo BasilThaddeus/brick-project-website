@@ -17,6 +17,10 @@ David: {
 		https://www.w3schools.com/nodejs/nodejs_url.asp
 	}
 }
+
+IMPORTANT URL: http://localhost:8081/createUser?func=signup&user=00000000000&pass=dj0nt
+
+
 Basil: {
 
 }
