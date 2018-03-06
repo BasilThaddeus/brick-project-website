@@ -1,6 +1,7 @@
 var Tedious = require("tedious");
 var Promise = require("bluebird");
 
+/*
 module.exports = {
     msSqlConnecter: function (config) {
         var currentConnect = this;
@@ -71,9 +72,9 @@ module.exports = {
         }
 
         currentConnect.connect = function () {
-            var connection = new Tedious.connection(config);
+            var connection = new Tedious.Connection(config);
             currentConnect.connection = connection;
             return Promise.promisify(connection.on.bind(connection))("connect");
         }
     }
-}
+}*/
