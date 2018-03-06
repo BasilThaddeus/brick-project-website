@@ -14,7 +14,7 @@ li {
     padding-top: 0px;
 }
 .headerContent {
-    width: 425px;
+    width: 500px;
     height: auto;
     margin: 0 auto;
     font-family: "Verdana";
@@ -40,6 +40,7 @@ li {
 .nav ul li {
     list-style: none;
 }
+/* This has the secret to no blue urls! */
 .nav ul li a {
     text-decoration: none;
     display: inline-block;
@@ -64,10 +65,13 @@ li {
 }
 .dwnload ul li a {
     text-decoration: none;
-    display: block;
-    position: left;
+    display: absolute;
+    position: relative;
+    top: 0px;
+    left: -825px;
     padding: 2px 10px;
     color: white;
+
 }
 .dwnload ul li a:hover {
     color: skyblue;
