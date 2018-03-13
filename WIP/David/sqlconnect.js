@@ -2,7 +2,6 @@
 var TYPES = require("tedious");
 var http = require("http");
 var url = require("url");
-var msSqlConnecter = require("./mssqlconnecter");
 var mysql = require("mysql");
 
 /*var config = {
@@ -19,10 +18,17 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
 	host: "localhost", 
 	user: "root", 
-	password: ""
+	password: "", 
+	database: ""
 });
 
 http.createServer(function (req, res) {
+
+    console.log("Starting connection...");
+    con.connect(function(err) {
+        //if (err) throw err;
+    });
+
     var urlprs = url.parse(req.url, true);
     console.log(urlprs.pathname);
     console.log(urlprs.search);
@@ -30,79 +36,46 @@ http.createServer(function (req, res) {
     var query = urlprs.query;
 
     if(query.func=="signup") {
-	signup(query.user, query.pass);
+	   if (signup(query.user, query.pass) == true) {
+            res.write("success");
+       }
     } else if(query.func=="login") {
-	login(query.user, query.pass);
+       if (login(query.user, query.pass) == true) {
+            res.write("true");
+       } else {
+            res.write("false");
+       }
     }
-}).listen(8081);
 
+    res.end();
+/////////SHOULD BE 8081
+}).listen(8082);
 
-
-
-function signup(user, pass) {
-	con.connect(function(err) {
-		if (err) throw err;
-		console.log("Connected!");
-		//var q = "INSERT INTO user_data (user, pass, signup_date) VALUES (" + user + ", " + pass + ", " + Date.now() / 1000 | 0 + ");";
-
-		//var q = "USE basil_website_test_db; INSERT INTO user_data (`user`, pass) VALUES ('a', 'b');";
-
-		var q = "USE basil_website_test_db; SELECT * FROM user_data";
-
-
-		con.query(q, function (err, result) {
-			//if (err) throw err;
-con.on('error', function(err) {
-  console.log("[mysql error]",err);
-});
-			console.log("Result: " + result);
-		});
-	});
+function signup(u, p) {
+    console.log("Querying...");
+    con.query("INSERT INTO user_data (user, pass) VALUES ('" + u + "', '" + p + "');", function (err, result) {
+        if (err) throw err;
+        console.log("Success!");
+    });
+    return true;
 }
 
 
-
-
-
-/*
-
-function signup(user, pass) {
-	var con = new msSqlConnecter.msSqlConnecter(config);
-    con.connect().then(function () {
-        new con.Request("insert account data(@id,@user,@pass,@signup_date)")
-            .addParam("user", TYPES.VarChar, user)
-            .addParam("pass", TYPES.VarChar, pass)
-            .addParam("signup_date", TYPES.date, Date.now() / 1000 | 0) //Check date code
-            .onComplate(function (count) {
-                if (callback)
-                    callback(count);
-            })
-            .onError(function (err) {
-                console.log(err);
-            })
-            .Run();
-    }).catch(function (ex) {
-        console.log(ex);
+//For this to work the usernames MUST BE UNIQUE
+function login(u, p) {
+    console.log("Querying...");
+    var djent = false;
+    con.query("SELECT pass FROM user_data WHERE user = '" + u + "'", function (err, result) {
+        if (err) throw err;
+        console.log("Results retrieved successfuly!");
+        console.log("u                                      " + u);
+        console.log("p                                      " + p);
+        console.log("result                                 " + result);
+        if (result[1] = p) {
+            djent = true;
+        } else if (result[1] != p) {
+            djent = false;
+        }
     });
+    return djent;
 }
-
-function login(user1, pass) {
-    var con = new msSqlConnecter.msSqlConnecter(config);
-    con.connect().then(function () {
-        new con.Request("select pass from user_data where user = user1;") 
-            .onComplate(function (count, datas) {
-                if (callback)
-                    callback(datas);
-            })
-            .onError(function (err) {
-                console.log(err);
-            }).Run();
-    }).catch(function (ex) {
-        console.log(ex);
-   		if(ex == pass) {
-   			return true;
-   		} else {
-   			return false
-   		}
-    });
-}*/
