@@ -6,6 +6,13 @@ ul {
 li {
     display: inline;
 }
+body{
+background-image:url('https://wallpaperscraft.com/image/planet_light_spots_space_86643_1920x1080.jpg');
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 }
 .header {
     width: 50%;
