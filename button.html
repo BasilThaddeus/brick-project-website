@@ -8,17 +8,17 @@ body{
 .button {
     background-color: #4CAF50; 
     color: white;
-    padding: 16px 32px;
+    padding: 32px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 65px;
-    margin: 400px 60px;
+    font-size: 60px;
+    margin: 200px 100px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
     width: 250;
-    height: 150;
+    height: 200;
 }
 .click1 {border-radius: 8px}
 .click1 {
@@ -39,6 +39,18 @@ body{
 }
 
 .click2:hover {
+    background-color: #070d0f;
+    color: white;
+}
+
+.click3 {border-radius: 8px}
+.click3 {
+    background-color: grey; 
+    color: #070d0f; 
+    border: 2px solid #070d0f;
+}
+
+.click3:hover {
     background-color: #070d0f;
     color: white;
 }
@@ -68,8 +80,21 @@ body{
 <center>
 <button class="button click1">+1</button>
 <button class="button click2">+2</button>
+<button class="button click2">+3</button>
 <button class="button click5">+5</button>
 <button class="button click10">+10</button>
 </center>
 </body>
+<style>
+footer {
+    color: grey;
+    font-size: 65px;
+}
+</style>
+<footer>
+<center><p>+1 = 500 AMD</p></center>
+<center><p>+3 is the same cost as 1 admission ticket</p></center>
+<center><p>For Ticket Stand Organizer:</p></center>
+<center><p>Entrance: 1500 AMD | Group of 4: 4500 AMD | Additional to 4: 1000 AMD</p></center>
+</footer>
 </html>
