@@ -1,13 +1,15 @@
 var http = require("http");
 var url = require("url");
 
-
-//http://188.166.172.236/?n=1
-
+//http://188.166.172.236/1
 
 global.ticketNum = 0;
 
-http.createServer(function (req, res) {
+console.log("Server Starting...");
+
+var server = http.createServer(function (req, res) {
+
+	res.setHeader("Access-Control-Allow-Origin", "*");
 
 	console.log("");
 
@@ -23,6 +25,10 @@ http.createServer(function (req, res) {
     ticketNum += parseInt(numToAdd);
 
     console.log(ticketNum);
-    
+
     res.end(String(ticketNum));
-}).listen(8085);
+});
+
+//.listen(8085, '188.166.172.236')
+
+server.listen(8085);
