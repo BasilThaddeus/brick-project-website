@@ -105,5 +105,22 @@ p{
 }
 </style>
 <center><p>Bricks: <a id="clicks">0</a></p></center>
+
+<script>
+var timer = setInterval(getBricks, 1000);
+
+function getBricks() {
+
+	const http = new XMLHttpRequest();
+
+http.open("GET", "http://localhost:8085/0");
+http.send();
+
+    var str = document.getElementById("clicks").innerHTML;
+    http.onload = () => document.getElementById("clicks").innerHTML = http.responseText;
+}
+</script>
+
+
 </body>
 </html>
