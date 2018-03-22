@@ -78,12 +78,21 @@ body{
 }
 </style>
 <center>
-<button class="button click1">+1</button>
-<button class="button click2">+2</button>
-<button class="button click2">+3</button>
-<button class="button click5">+5</button>
-<button class="button click10">+10</button>
+<button class="button click1" onclick="sendBricks(1)">+1</button>
+<button class="button click2" onclick="sendBricks(2)">+2</button>
+<button class="button click2" onclick="sendBricks(3)">+3</button>
+<button class="button click5" onclick="sendBricks(5)">+5</button>
+<button class="button click10" onclick="sendBricks(10)">+10</button>
 </center>
+
+<script>
+function sendBricks(num) {
+	const http = new XMLHttpRequest();
+	http.open("SEND", "http://localhost:8085/" + num);
+	http.send();
+}
+</script>
+
 </body>
 <style>
 footer {
