@@ -76,6 +76,20 @@ body{
     background-color: #070d0f;
     color: white;
 }
+
+
+
+.clickm1 {border-radius: 8px}
+.clickm1 {
+    background-color: red; 
+    color: #070d0f; 
+    border: 2px solid #070d0f;
+}
+
+.clickm1:hover {
+    background-color: #070d0f;
+    color: white;
+}
 </style>
 <center>
 <button class="button click1" onclick="sendBricks(1)">+1</button>
@@ -83,6 +97,7 @@ body{
 <button class="button click2" onclick="sendBricks(3)">+3</button>
 <button class="button click5" onclick="sendBricks(5)">+5</button>
 <button class="button click10" onclick="sendBricks(10)">+10</button>
+<button class="button clickm1" onclick="sendBricks(-1)">-1</button>
 </center>
 
 <script>
