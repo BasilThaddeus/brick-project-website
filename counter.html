@@ -83,29 +83,34 @@
 	}
 }
 body {
-	z-index:1;
+	z-index:-1;
 	animation-name: colorChange;
 	animation-duration: 20s;
 	animation-iteration-count: infinite;
 	overflow:hidden;
+	user-select: none;
 }
 @keyframes colorChange {
 	0%   {background-color: purple;}
     25%  {background-color: lightblue;}
     50%  {background-color: lime;}
-    75%  {background-color: yellow}
-    100% {background-color: purple}
+    75%  {background-color: yellow;}
+    100% {background-color: purple;}
 }
 p{
-	color: #ff913d;
-	font-size: 50px;
+	color: #212428;
+	position: absolute;
+	font-size: 100px;
 	font-family: arial;
-	margin: 10px 20px;
-	padding: 450px;
+	margin: 0;
+	left: 35%;
+	margin-right: -50%;
+	top: 45%;
+	z-index: 0;
 }
-</style>
-<center><p>Bricks: <a id="clicks">0</a></p></center>
 
+</style>
+<center><p><strong>Bricks: 0</strong></p></center>
 <script>
 var timer = setInterval(getBricks, 1000);
 
@@ -119,6 +124,7 @@ http.send();
     var str = document.getElementById("clicks").innerHTML;
     http.onload = () => document.getElementById("clicks").innerHTML = http.responseText;
 }
+document.body.style.cursor = 'none';
 </script>
 
 
