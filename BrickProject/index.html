@@ -97,7 +97,7 @@ body {
     75%  {background-color: yellow;}
     100% {background-color: purple;}
 }
-p{
+p, div{
 	color: #212428;
 	position: absolute;
 	font-size: 100px;
@@ -110,7 +110,7 @@ p{
 }
 
 </style>
-<center><p><strong>Bricks: 0</strong></p></center>
+<center><p>Bricks: <a id="clicks">0</a></p></center>
 <script>
 var timer = setInterval(getBricks, 1000);
 
